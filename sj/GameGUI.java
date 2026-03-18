@@ -195,7 +195,7 @@ public class GameGUI extends JFrame {
             if(c.type.equals("attack")){
 
                 btn.setIcon(swordIcon);
-                btn.setText("공격 "+c.attack);
+                btn.setText("공격함 "+c.attack);
             }
 
             if(c.type.equals("defense")){
