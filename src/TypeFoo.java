@@ -11,6 +11,6 @@ public class TypeFoo {
     System.out.println((byte)(b+i));
     System.out.println((int)2.9 + 1.8);
     System.out.println((int)(2.9 + 1.8));
-    System.out.println((int)2.9 + (int)1.9);
+    System.out.println((int)2.9 + (int)1.8);
 }
 }
