@@ -47,18 +47,3 @@ final 키워드를 사용한 상수 정의
 
 목적: 자료형 변환 이해
 
-## 의존성 관리 (Dependency Management)
-
-VS Code의 JAVA PROJECTS 탭에서 라이브러리를 추가 및 관리할 수 있습니다.
-
-## 요약 (Summary)
-
-이 프로젝트는 다음 내용을 포함합니다.
-
-Java 기본 구조
-입력 및 출력
-메서드 사용
-상수 (final)
-형변환 (Casting)
-
-Java 기초 학습을 위한 연습용 프로젝트입니다.
