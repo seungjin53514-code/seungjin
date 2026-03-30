@@ -1,18 +1,64 @@
-## Getting Started
+## 시작하기 (Getting Started)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+이 프로젝트는 Java 2 수업 요약 프로젝트입니다.
+출력, 입력, 메서드, 상수, 형변환 등 Java의 기본 개념을 연습하기 위해 구성되었습니다.
 
-## Folder Structure
+## 폴더 구조 (Folder Structure)
 
-The workspace contains two folders by default, where:
+프로젝트는 다음과 같은 폴더로 구성되어 있습니다.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+src : Java 소스 코드 파일 저장
+lib : 외부 라이브러리 저장 (필요 시 사용)
+bin : 컴파일된 .class 파일 생성 (자동 생성)
+ 
+## 주요 파일 설명 (Project Files Overview)
+App.java
+Java 프로그램의 기본 구조
+main() 메서드를 통한 실행 시작
+간단한 출력문 실행
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+목적: Java 실행 구조 이해
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Foo.java
+sum(int n, int m) 메서드 정의
+메서드 호출 및 변수 사용
+문자, 문자열, 계산 결과 출력
 
-## Dependency Management
+목적: 메서드와 기본 연산 이해
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Boo.java
+Scanner를 사용한 사용자 입력 처리
+다양한 자료형 입력 처리 (문자열, 정수, 실수, 논리형)
+입력값 출력
+
+목적: 입력 처리 방법 학습
+
+## Bar.java
+final 키워드를 사용한 상수 정의
+원의 면적 계산
+산술 연산 활용
+
+목적: 상수와 계산식 이해
+
+## TypeFoo.java
+형변환(Casting) 예제
+정수/실수 연산 차이 확인
+형변환에 따른 결과 변화 확인
+
+목적: 자료형 변환 이해
+
+## 의존성 관리 (Dependency Management)
+
+VS Code의 JAVA PROJECTS 탭에서 라이브러리를 추가 및 관리할 수 있습니다.
+
+## 요약 (Summary)
+
+이 프로젝트는 다음 내용을 포함합니다.
+
+Java 기본 구조
+입력 및 출력
+메서드 사용
+상수 (final)
+형변환 (Casting)
+
+Java 기초 학습을 위한 연습용 프로젝트입니다.
