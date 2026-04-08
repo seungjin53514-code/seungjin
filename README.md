@@ -252,7 +252,7 @@ else{
 }
 
 ## 조건문 switch
- ---switch(식){
+ ---java switch(식){
     case 값1:
     실행 문장  //결과가 실행1일떄
     break;
