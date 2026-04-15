@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Ex37 {
 
 	public static void main(String[] args) {
-		Scanner scanner=new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		
 		/*int intArray[];
-		intArray=new int[5]; */ //5개의 크기로 배열 선언
-		//선언과 갱성을 한줄에 할 수 있다
+		intArray=new int[5] */ //5개의 크기로 배열 선언
+		//선언과 갱성을 한줄에; 할 수 있다
 		int intArray[] = new int[5];
 
 		int max=0; //현재 가장 큰 수
