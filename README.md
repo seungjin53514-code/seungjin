@@ -73,6 +73,7 @@ if (p instanceof Student) {
 - 예:  Shape 의  draw() 를  Line ,  Rectangle ,  Circle 이 각각 다르게 구현
 - “다양한 형태로 나타난다”는 의미에서 다형성(Polymorphism)
 ---
+# 중간고사
 ## 4월15일 7주차
 
 - 클래스는 그냥 사용하는것이 아니라
