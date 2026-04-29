@@ -72,6 +72,7 @@ if (p instanceof Student) {
 - 하나의 인터페이스(부모 타입/메소드 형태)에 대해 서로 다른 구현이 가능
 - 예:  Shape 의  draw() 를  Line ,  Rectangle ,  Circle 이 각각 다르게 구현
 - “다양한 형태로 나타난다”는 의미에서 다형성(Polymorphism)
+
 ---
 # 중간고사
 ## 4월15일 7주차
@@ -165,7 +166,6 @@ c[i] = new Circle(i);
 - final 필드 : 상수를 선언할떄 사용
 - 상수필드는 선언시 초기 값을 지정하여야 한다
 - 상수 필드는 실행중에 값을 변경할수 없다
-- sksdawud
 ---
 
 
