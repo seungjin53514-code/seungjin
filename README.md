@@ -2,6 +2,75 @@
 # 202330114 백승진  
 
 ---
+## 5월6일 10주차
+### 자바 플랫폼의 모듈화
+- 자바 플랬폼
+1. 자바의 개발환경과 자바의 실행환경을 지칭
+2. 자바 API의 모든 클래스가 여러 개의 모듈로 재구성됨
+3. 모듈 파일은 JDK의 import 
+
+### JDK의 주요 패키지 
+- java.lang
+- java.util
+- java.io
+- java.awt
+- java.swing
+
+### Object 패키지
+- 모든 자바 클래스는 반드시 Object 를 상속받도록 자동 컴파일
+- 모든 클래스의 수퍼 클래스 
+- 코든 클래스가 상속받는 공통 메소드 포함
+ ### 주요 메서드
+ ```
+    equals → 객체 내용 비교
+    hashCode → 해시값 (equals랑 세트)
+    toString → 문자열 표현
+    getClass → 클래스 정보
+    clone → 객체 복사
+    wait / notify / notifyAll → 스레드 제어
+```
+### Wrapper클래스
+- Wrapper클래스 : 자바의 기본 타입을 클래스화 한 8개 클래스를 통칭
+
+- byte → Byte
+- short → Short
+- int → Integer
+- long → Long
+- float → Float
+- double → Double
+- char → Character
+- boolean → Boolean
+### 스트링 리터널과 new String()
+- 스트링 리터널
+1. 자바 가상기계 내부에서 리터널 테이블에 저장되고 관리됨
+2. 스트링 객체는 수정 불가능 하다
+### String 활용
+- 스트링 비교 .equals()와ㅓ compareTo()
+- 스트링 비교에 == 사용 금지
+- equals(): 스트링이 같으면 true 아니면 false 리턴
+- int compareTo 
+1. 문자열이 같으면 0 리턴
+2. 이 문자열이 antherString 보다 먼저 나오면 음수 리턴
+3. 이 문자열이 antherString 보다 나중에 나오면 양수 리턴
+- 공백제거 , String trim()
+### Math 클래스
+- 기본 산술 연산 메소드를 제공하는 클래스
+- 모든 메소드는 static으로 선언
+- Math.randem() 메소드로 난수 발생
+### 컬랙션의 개념
+- 요소 라고 불리는 가변 개수의 객체들의 저장소 
+1. 객테들의 컨테이너라고도 불림
+2. 요소의 개수에 따라 크기 자동 조절
+3. 요소 삽입 삭제에 따른 요소의 위치 자동 이동
+- 고정 크기의 배열을 다루는 어려움 해소
+- 다양한 객체들의 삽입 삭제 검색등의 관리 용이
+### 컬랙션의 특징
+1. 컬랙션은 제네릭 기법으로 구현
+- 제네릭 : 특정 타입만 다루자않고 여러종류의 타입으로 변신할수있는 클래스나 메소드를 일봔화 시키는 기법
+2. JDK 1.5 부터 도입
+
+
+---
 ## 4월29일 9주차
 
 ### 상속
