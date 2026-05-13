@@ -45,17 +45,17 @@
 import javax.swing.*;
 
 public class MyFrame extends JFrame {
-
-    public MyFrame() {
-        setTitle("첫 번째 스윙");
-        setSize(300, 200);
-        setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        new MyFrame();
-    }
+	public MyFrame() {
+		setTitle("300x300 스윙 프레임 만들기");
+		setSize(300,300); // 프레임 크기 300x300
+		setVisible(true); // 프레임 출력
+	}
+	
+	public static void main(String[] args) {
+		MyFrame frame = new MyFrame();
+	}
 }
+
 ```
 
 ### JFrame 주요 메소드
@@ -93,25 +93,28 @@ Container c = getContentPane();
 ### 예제
 
 ```java
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 public class ContentPaneEx extends JFrame {
+	public ContentPaneEx() {
+		setTitle("ContentPane과 JFrame 예제"); // 프레임의 타이틀  달기
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 프레임 윈도우를 닫으면 프로그램 종료
 
-    public ContentPaneEx() {
-        setTitle("ContentPane");
-        setSize(300, 200);
-
-        Container c = getContentPane();
-
-        c.setBackground(Color.ORANGE);
-
-        setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        new ContentPaneEx();
-    }
+		 // 컨텐트 팬을 알아낸다.
+		setBackground(Color.ORANGE); // 오렌지색 배경 설정
+		setLayout(new FlowLayout()); // 컨텐트팬에 FlowLayout 배치관리자 달기
+		add(new JButton("OK")); // OK 버튼 달기
+		add(new JButton("Cancel")); // Cancel 버튼 달기
+		add(new JButton("Ignore")); // Ignore 버튼 달기
+		
+		setSize(300, 150); // 프레임 크기 300x150 설정
+		setVisible(true); // 화면에 프레임 출력
+	}
+	
+	public static void main(String[] args) {
+		new ContentPaneEx();
+	}
 }
 ```
 
@@ -183,7 +186,26 @@ add(ta);
 | GridLayout | 격자 형태 |
 | CardLayout | 카드 형태 |
 
---- 
+### 배치 관리자가 없는 컨테이너
+- 배치관리자가 없는 컨테이너가 필요한 경우
+1. 응용프로그램에서 직접 컴포넌트 크기와 위치를 결정하고자 하는 경우
+
+
+
+---
+
+### 배치 관리자 제거
+
+```java
+container.setLayout(null);
+```
+### 설정방법
+```java
+setSize(width, height); //크기
+setLocation(x, y);// 위치
+setBounds(x, y, width, height);//크기위치
+```
+
 
 ## 5월6일 10주차
 ### 자바 플랫폼의 모듈화
