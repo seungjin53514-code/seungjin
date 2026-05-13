@@ -2,6 +2,33 @@
 # 202330114 백승진  
 
 ---
+## 5월13일 11주차
+### 자바의 GUI 
+- GUI  
+1. 사용자가 편리하게 입출력 할수있도록 그래픽으로 화면을 구성하고 마우스나 키보드로 입력받을수 있도록 지원하는 사용자 인터페이스
+- swing 패키지 
+1. AWT 기술을 기반으로 작성된 자바 라이브러리
+2. 모든 AWT 기능 + 추가된 풍부하고 화려한 고급 컴포넌트
+3. AWT 컴포넌트 모두 스윙으로 재작성
+4. AWT 컴포넌트 이름 앞에 J자를 붙임
+### 컨테이너와 컴포넌트
+- 컨테이너
+1. 다른 컴포넌트를 포함할 수 있는 GUI 컴포넌트 : java.awt.Container 를 상속받음
+2. 다른 컨테이너에 포함될수있음
+3. AWT 컨테이너 : panel, frame, Applet, Dialog, Window
+4. swing 컨테이너 : Jpanel, Jframe, JApplet, JDialog, JWindow
+```java
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+```
+### Swing 프레임
+- 스윙프래임 : 모든 스윙 컴포넌트를 담는 최상위 컨테이너
+1. Jpanel을 상속받아 구현
+1. 프레임(JFrame): 프로그램의 기본 창 생성 기능
+2. 메뉴바(JMenuBar): 프로그램 메뉴 구성 기능
+3. 컨텐트팬(ContentPane): 컴포넌트를 배치하는 영역
+
 ## 5월6일 10주차
 ### 자바 플랫폼의 모듈화
 - 자바 플랬폼
