@@ -4,30 +4,202 @@
 ---
 ## 5월13일 11주차
 ### 자바의 GUI 
-- GUI  
-1. 사용자가 편리하게 입출력 할수있도록 그래픽으로 화면을 구성하고 마우스나 키보드로 입력받을수 있도록 지원하는 사용자 인터페이스
-- swing 패키지 
-1. AWT 기술을 기반으로 작성된 자바 라이브러리
-2. 모든 AWT 기능 + 추가된 풍부하고 화려한 고급 컴포넌트
-3. AWT 컴포넌트 모두 스윙으로 재작성
-4. AWT 컴포넌트 이름 앞에 J자를 붙임
-### 컨테이너와 컴포넌트
-- 컨테이너
-1. 다른 컴포넌트를 포함할 수 있는 GUI 컴포넌트 : java.awt.Container 를 상속받음
-2. 다른 컨테이너에 포함될수있음
-3. AWT 컨테이너 : panel, frame, Applet, Dialog, Window
-4. swing 컨테이너 : Jpanel, Jframe, JApplet, JDialog, JWindow
+# 명품 Java Essential 개정 3판  
+# 8장. 자바 GUI 스윙 기초
+
+---
+
+### GUI(Graphical User Interface)
+
+- GUI는 그래픽 기반 사용자 인터페이스를 의미한다.  
+- 마우스 클릭, 버튼, 창(Window) 등을 사용하여 프로그램을 조작한다.
+
+### 자바 GUI 종류
+
+| 종류 | 설명 |
+|---|---|
+| AWT | 자바 초기 GUI |
+| Swing | AWT 개선 버전 |
+| JavaFX | 최신 GUI 프레임워크 |
+
+현재 가장 많이 학습하는 것은 **Swing**이다.
+
+---
+
+## 2. Swing 특징
+
+- 순수 자바로 제작
+- 운영체제 영향이 적음
+- 다양한 컴포넌트 제공
+- 이벤트 기반 프로그래밍 사용
+- 경량 컴포넌트 사용
+
+---
+
+## 3. Swing 주요 클래스
+
+| 클래스 | 설명 |
+|---|---|
+| JFrame | 메인 창 |
+| JPanel | 패널 |
+| JButton | 버튼 |
+| JLabel | 텍스트 출력 |
+| JTextField | 입력창 |
+| JTextArea | 여러 줄 입력 |
+| JCheckBox | 체크박스 |
+| JRadioButton | 라디오 버튼 |
+| JComboBox | 콤보 박스 |
+
+---
+
+## 4. JFrame 생성
+
+```java
+import javax.swing.*;
+
+public class MyFrame extends JFrame {
+
+    public MyFrame() {
+        setTitle("첫 번째 스윙");
+        setSize(300, 200);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+```
+
+---
+
+## 5. JFrame 주요 메소드
+
+| 메소드 | 설명 |
+|---|---|
+| setTitle() | 제목 설정 |
+| setSize() | 크기 설정 |
+| setVisible() | 화면 출력 |
+| setDefaultCloseOperation() | 종료 설정 |
+| add() | 컴포넌트 추가 |
+
+---
+
+## 6. 컨테이너(Container)
+
+컨테이너는 컴포넌트를 담는 공간이다.
+
+### 대표 컨테이너
+
+- JFrame
+- JPanel
+- JDialog
+
+---
+
+## 7. Content Pane
+
+JFrame 내부 실제 컴포넌트가 배치되는 영역이다.
+
+```java
+Container c = getContentPane();
+```
+
+### 예제
+
 ```java
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+
+public class ContentPaneEx extends JFrame {
+
+    public ContentPaneEx() {
+        setTitle("ContentPane");
+        setSize(300, 200);
+
+        Container c = getContentPane();
+
+        c.setBackground(Color.ORANGE);
+
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new ContentPaneEx();
+    }
+}
 ```
-### Swing 프레임
-- 스윙프래임 : 모든 스윙 컴포넌트를 담는 최상위 컨테이너
-1. Jpanel을 상속받아 구현
-1. 프레임(JFrame): 프로그램의 기본 창 생성 기능
-2. 메뉴바(JMenuBar): 프로그램 메뉴 구성 기능
-3. 컨텐트팬(ContentPane): 컴포넌트를 배치하는 영역
+
+---
+
+## 8. 컴포넌트(Component)
+
+GUI 화면에 배치되는 요소이다.
+
+### 예시
+
+- 버튼
+- 텍스트 필드
+- 체크 박스
+- 라벨
+
+---
+
+## 9. JLabel
+
+텍스트 출력 컴포넌트
+
+```java
+JLabel label = new JLabel("안녕하세요");
+add(label);
+```
+
+---
+
+## 10. JButton
+
+버튼 컴포넌트
+
+```java
+JButton btn = new JButton("클릭");
+add(btn);
+```
+
+---
+
+## 11. JTextField
+
+한 줄 입력창
+
+```java
+JTextField tf = new JTextField(20);
+add(tf);
+```
+
+---
+
+## 12. JTextArea
+
+여러 줄 입력창
+
+```java
+JTextArea ta = new JTextArea(5, 20);
+add(ta);
+```
+
+---
+
+## 13. 배치 관리자(Layout Manager)
+
+컴포넌트 위치를 자동 배치한다.
+
+| 배치 관리자 | 특징 |
+|---|---|
+| FlowLayout | 왼쪽 → 오른쪽 |
+| BorderLayout | 동서남북중앙 |
+| GridLayout | 격자 형태 |
+| CardLayout | 카드 형태 |
+
 
 ## 5월6일 10주차
 ### 자바 플랫폼의 모듈화
