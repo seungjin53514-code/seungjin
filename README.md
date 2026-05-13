@@ -4,13 +4,6 @@
 ---
 ## 5월13일 11주차
 ### 자바의 GUI 
-# 명품 Java Essential 개정 3판  
-# 8장. 자바 GUI 스윙 기초
-
----
-
-### GUI(Graphical User Interface)
-
 - GUI는 그래픽 기반 사용자 인터페이스를 의미한다.  
 - 마우스 클릭, 버튼, 창(Window) 등을 사용하여 프로그램을 조작한다.
 
@@ -24,9 +17,7 @@
 
 현재 가장 많이 학습하는 것은 **Swing**이다.
 
----
-
-## 2. Swing 특징
+### Swing 특징
 
 - 순수 자바로 제작
 - 운영체제 영향이 적음
@@ -34,9 +25,7 @@
 - 이벤트 기반 프로그래밍 사용
 - 경량 컴포넌트 사용
 
----
-
-## 3. Swing 주요 클래스
+### Swing 주요 클래스
 
 | 클래스 | 설명 |
 |---|---|
@@ -50,9 +39,7 @@
 | JRadioButton | 라디오 버튼 |
 | JComboBox | 콤보 박스 |
 
----
-
-## 4. JFrame 생성
+### JFrame 생성
 
 ```java
 import javax.swing.*;
@@ -71,9 +58,7 @@ public class MyFrame extends JFrame {
 }
 ```
 
----
-
-## 5. JFrame 주요 메소드
+### JFrame 주요 메소드
 
 | 메소드 | 설명 |
 |---|---|
@@ -83,9 +68,9 @@ public class MyFrame extends JFrame {
 | setDefaultCloseOperation() | 종료 설정 |
 | add() | 컴포넌트 추가 |
 
----
 
-## 6. 컨테이너(Container)
+
+### 컨테이너(Container)
 
 컨테이너는 컴포넌트를 담는 공간이다.
 
@@ -95,9 +80,9 @@ public class MyFrame extends JFrame {
 - JPanel
 - JDialog
 
----
 
-## 7. Content Pane
+
+### Content Pane
 
 JFrame 내부 실제 컴포넌트가 배치되는 영역이다.
 
@@ -130,9 +115,7 @@ public class ContentPaneEx extends JFrame {
 }
 ```
 
----
-
-## 8. 컴포넌트(Component)
+### 컴포넌트(Component)
 
 GUI 화면에 배치되는 요소이다.
 
@@ -143,9 +126,9 @@ GUI 화면에 배치되는 요소이다.
 - 체크 박스
 - 라벨
 
----
 
-## 9. JLabel
+
+### JLabel
 
 텍스트 출력 컴포넌트
 
@@ -154,9 +137,9 @@ JLabel label = new JLabel("안녕하세요");
 add(label);
 ```
 
----
 
-## 10. JButton
+
+### JButton
 
 버튼 컴포넌트
 
@@ -165,9 +148,9 @@ JButton btn = new JButton("클릭");
 add(btn);
 ```
 
----
 
-## 11. JTextField
+
+### JTextField
 
 한 줄 입력창
 
@@ -176,9 +159,9 @@ JTextField tf = new JTextField(20);
 add(tf);
 ```
 
----
 
-## 12. JTextArea
+
+### JTextArea
 
 여러 줄 입력창
 
@@ -187,9 +170,9 @@ JTextArea ta = new JTextArea(5, 20);
 add(ta);
 ```
 
----
 
-## 13. 배치 관리자(Layout Manager)
+
+### 배치 관리자(Layout Manager)
 
 컴포넌트 위치를 자동 배치한다.
 
@@ -200,6 +183,7 @@ add(ta);
 | GridLayout | 격자 형태 |
 | CardLayout | 카드 형태 |
 
+--- 
 
 ## 5월6일 10주차
 ### 자바 플랫폼의 모듈화
